@@ -1,0 +1,55 @@
+
+*{
+      font-family: 'nunito', 'Josefin Sans';
+
+}
+.costum-class{
+    background: #a9a9a9;
+}
+
+body{
+    font-size: 14px;
+}
+
+.navbar{
+    padding: 0;
+}
+.navbar-nav{
+    .navbar-brand{
+        color: #efefef;
+    }
+    .nav-item{
+        font-size: 1.3rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        a,button{
+            color: #efefef;
+        }
+    }
+}
+
+.nav-item:hover{
+    background: #f7f7f7;
+}
+
+.nav-item:hover{
+    background: #56ace3;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+.top-left {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+  }
+  
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

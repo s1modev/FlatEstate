@@ -23,7 +23,7 @@
             <div class="mt-4">
                 <div class="">
                     <h5 class="font-weight-bold"><i class="far fa-file-alt"></i> Full Description :</h4>
-                    <p style="font-size: 15px;">{{$post->description}}</p>
+                    <p style="font-size: 15px;" >{!! nl2br(e($post->description)) !!}</p>
                 </div>
             </div>
             <div class="mt-4">

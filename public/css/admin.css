@@ -1,0 +1,10 @@
+* {
+  font-family: "Source Sans Pro", "nunito";
+  box-shadow: none !important;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

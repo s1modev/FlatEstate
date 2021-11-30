@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\PackageController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,13 +24,6 @@ Route::post('/register', [AuthController\Register::class, 'store'])->name('regis
 
 Route::get('/login', [AuthController\Login::class, 'index'])->name('login');
 Route::post('/login', [AuthController\Login::class, 'store'])->name('login');
-
-/*
-Route::get('/account/settings', [AccountController\Settings::class, 'index'])->name('account.settings');
-Route::post('/update/account', [AccountController\Settings::class, 'update'])->name('update.account');
-Route::post('/update/email', [AccountController\Settings::class, 'updateEmail'])->name('update.email');
-Route::post('/update/password', [AccountController\Settings::class, 'updatePassword'])->name('update.password');
-*/
 
 Route::get('/settings/account', [SettingsController\Account::class, 'index'])->name('settings.account');
 Route::post('/account/update', [SettingsController\Account::class, 'update'])->name('account.update');
@@ -51,3 +46,24 @@ Route::get('/post/check_slug', [PostController\Create::class, 'checkSlug'])->nam
 Route::get('/post/update/{post}', [PostController\Update::class, 'index'])->name('post.update');
 Route::post('/post/update/{post}', [PostController\Update::class, 'update'])->name('post.update');
 
+Route::get('/pricing', [PackageController\Pricing::class, 'index'])->name('pricing');
+
+Route::get('/ckeckout/{package}', [PackageController\Checkout::class, 'index'])->name('checkout');
+
+Route::get('/ckeckout/card/{package}', [PaymentController\Stripe::class, 'index'])->name('checkout.stripe');
+Route::post('/ckeckout/card/pay', [PaymentController\Stripe::class, 'pay'])->name('checkout.stripe.pay');
+
+
+Route::get('/admin/package/create', [PackageController\Create::class, 'index'])->name('package.create');
+Route::post('/admin/package/create', [PackageController\Create::class, 'store'])->name('package.create');
+
+Route::get('/admin/package/update/{package}', [PackageController\Update::class, 'index'])->name('package.update');
+Route::post('/admin/package/update/{package}', [PackageController\Update::class, 'update'])->name('package.update');
+
+Route::post('/admin/package/delete/{package}', [PackageController\Delete::class, 'destroy'])->name('package.delete');
+
+Route::get('/admin/packages', [PackageController\Dashboard::class, 'index'])->name('package.dashbaord');
+
+Route::get('/admin/users', [UserController\Dashboard::class, 'index'])->name('user.dashbaord');
+
+Route::post('/admin/user/delete/{user}', [UserController\Delete::class, 'destroy'])->name('user.delete');

@@ -1,36 +1,32 @@
 * {
-  font-family: "nunito", "Josefin Sans";
-}
-
-.costum-class {
-  background: #a9a9a9;
+  font-family: "nunito", "Source Sans Pro";
 }
 
 body {
   font-size: 14px;
 }
 
-.navbar {
+#main-nav {
   padding: 0;
 }
 
-.navbar-nav .navbar-brand {
+#main-nav .navbar-nav .navbar-brand {
   color: #efefef;
 }
-.navbar-nav .nav-item {
+#main-nav .navbar-nav .nav-item {
   font-size: 1.3rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
 }
-.navbar-nav .nav-item a, .navbar-nav .nav-item button {
+#main-nav .navbar-nav .nav-item a, #main-nav .navbar-nav .nav-item button {
   color: #efefef;
 }
 
-.nav-item:hover {
+#main-nav .nav-item:hover {
   background: #f7f7f7;
 }
 
-.nav-item:hover {
+#main-nav .nav-item:hover {
   background: #56ace3;
 }
 

@@ -44,7 +44,7 @@
                             </div>
                             <div class="form-group ">
                                 <label for="description" class="m-0">Description <strong class="text-danger">*</strong></label>
-                                <textarea class="form-control" id="description" name="description" rows="3">{{old('description')}}</textarea> 
+                                <textarea class="form-control" id="description" name="description" rows="6" style="white-space: pre-line">{{old('description')}}</textarea> 
                                 @error('description')
                                     <p class="text-danger mb-1">
                                         {{ $message }}
@@ -318,13 +318,7 @@
 @endsection
 
 @section('script')
-    <script>    
-        ClassicEditor
-            .create( document.querySelector( '#description' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
+    
     <script>
         let map;
         function initMap() {

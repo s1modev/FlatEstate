@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class ImageController extends Controller
 {
@@ -19,6 +20,9 @@ class ImageController extends Controller
         $name = uniqid() . '_' . trim($file->getClientOriginalName());
 
         $file->move($path, $name);
+        
+        $image = Image::make($path.'/'.$name)->fit(710,450);
+        $image->save();
 
         return ['name'=>$name];
             

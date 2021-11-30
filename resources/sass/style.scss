@@ -1,20 +1,18 @@
 
 *{
-      font-family: 'nunito', 'Josefin Sans';
+      font-family: 'nunito', 'Source Sans Pro';
 
 }
-.costum-class{
-    background: #a9a9a9;
-}
+
 
 body{
     font-size: 14px;
 }
 
-.navbar{
+#main-nav{
     padding: 0;
 }
-.navbar-nav{
+#main-nav .navbar-nav{
     .navbar-brand{
         color: #efefef;
     }
@@ -28,11 +26,11 @@ body{
     }
 }
 
-.nav-item:hover{
+#main-nav .nav-item:hover{
     background: #f7f7f7;
 }
 
-.nav-item:hover{
+#main-nav .nav-item:hover{
     background: #56ace3;
 }
 

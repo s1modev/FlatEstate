@@ -318,13 +318,7 @@
 @endsection
 
 @section('script')
-    <script>    
-        ClassicEditor
-            .create( document.querySelector( '#description' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
+    
     <script>
         let map;
         function initMap() {

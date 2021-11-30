@@ -5,6 +5,8 @@ namespace App\Http\Controllers\SettingsController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
+
 
 class Account extends Controller
 {
@@ -28,6 +30,8 @@ class Account extends Controller
             $file = $request->file('avatar');
             $avatar_name = uniqid() . '_' . trim($file->getClientOriginalName());
             $file->move($path, $avatar_name);
+            $image = Image::make($path.'/'.$avatar_name)->fit(200,200);
+            $image->save();
             if(auth()->user()->avatar!='user.jpg'){
                 File::delete(public_path('user_avatar/'.auth()->user()->avatar));
             }

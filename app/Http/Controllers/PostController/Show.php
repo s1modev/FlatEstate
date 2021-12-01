@@ -10,7 +10,8 @@ class Show extends Controller
 {
     public function index($slug){
         $post = Post::where('slug', $slug)->first();
+        $agent = $post->user()->first();
         $images = $post->images()->get();
-        return view('user.post.show',['post'=>$post, 'images'=>$images]);
+        return view('user.post.show',['post'=>$post, 'images'=>$images, 'agent'=>$agent]);
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('/send/email', [EmailController\Agent::class, 'send'])->name('send.email');
 
 Route::get('/register', [AuthController\Register::class, 'index'])->name('register');
 Route::post('/register', [AuthController\Register::class, 'store'])->name('register');

@@ -20,7 +20,8 @@ class Create extends Controller
     }
     
     public function store(StoreProjectRequest $request){
-        $post = Post::create($request->validated());
+        $user = auth()->user();
+        $post = $user->posts()->create($request->validated());
 
         foreach($request->media as $image){
             $from = public_path('tmp/uploads/'.$image);

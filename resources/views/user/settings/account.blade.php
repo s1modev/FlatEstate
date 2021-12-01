@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <label for="" class="mb-0">Phone Number</label>
-                            <input value="{{auth()->user()->phone_number}}" type="number" class="form-control @error('phone_number') is-invalid @enderror" placeholder="exemple (+19809795104)" name="phone_number">
+                            <input value="{{auth()->user()->phone_number}}" type="text" class="form-control @error('phone_number') is-invalid @enderror" placeholder="exemple (+19809795104)" name="phone_number">
 
                             @error('phone_number')
                             <p class="text-danger text-left">{{$message}}</p>

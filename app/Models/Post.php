@@ -12,6 +12,7 @@ class Post extends Model
     use HasFactory, Sluggable;
 
     protected $fillable = [
+        'user_id',
         'title',
         'slug',
         'deal',
@@ -38,6 +39,10 @@ class Post extends Model
 
     public function images(){
         return $this->hasMany(Image::class, 'post_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function sluggable()

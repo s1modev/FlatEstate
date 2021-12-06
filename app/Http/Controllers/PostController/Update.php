@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\PostController;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdatePostRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Country;
 use App\Models\Image;
@@ -17,7 +18,7 @@ class Update extends Controller
         return view('user.post.update',['countries'=>$countries, 'post'=>$post]);
     }
 
-    public function update(Post $post, UpdateProjectRequest $request){
+    public function update(Post $post, UpdatePostRequest $request){
         $post->update($request->validated());
 
         $features = ['garage', 'security', 'parking', 'balcony', 'swimming_pool', 'garden', 'terrace'];

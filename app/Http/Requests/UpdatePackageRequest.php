@@ -25,7 +25,8 @@ class UpdatePackageRequest extends FormRequest
     {
         return [
             'name'=>'required|max:255',
-            'price'=>'numeric',
+            'price'=>'required|numeric',
+            'credits'=>'required|numeric',
             'title'=>'required|max:255',
             'description'=>'nullable|max:2000',
             'status'=>'required|max:255'

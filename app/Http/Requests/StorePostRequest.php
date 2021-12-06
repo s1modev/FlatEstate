@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateProjectRequest extends FormRequest
+class StorePostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,10 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-            'slug' => ['required', 'max:300', 'unique:posts,slug,'.$this->route('post')->id],
+            'slug' => 'required|max:300|unique:posts',
             'deal' => 'required|max:50',
             'description' => 'required|max:4000',
+            'media' => 'required',
             'country' => 'required|max:50',
             'city' => 'required|max:255',
             'address' => 'max:255',
@@ -37,13 +38,13 @@ class UpdateProjectRequest extends FormRequest
             'bathrooms_number' => 'required|numeric|max:varchar(255)',
             'surface' => 'required|numeric|max:varchar(255)',
             'price' => 'required|numeric|max:varchar(255)',
-            'garage' => 'boolean',
-            'security' => 'boolean',
-            'parking' => 'boolean',
-            'balcony' => 'boolean',
-            'swimming_pool' => 'boolean',
-            'garden' => 'boolean',
-            'terrace' => 'boolean',
+            'garage' => 'nullable|boolean',
+            'security' => 'nullable|boolean',
+            'parking' => 'nullable|boolean',
+            'balcony' => 'nullable|boolean',
+            'swimming_pool' => 'nullable|boolean',
+            'garden' => 'nullable|boolean',
+            'terrace' => 'nullable|boolean',
             'category' => 'required|max:255',
             'condition' => 'required|max:255',
         ];

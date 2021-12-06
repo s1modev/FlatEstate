@@ -82,6 +82,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('order.dashboard')}}" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Orders
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('admin.post.dashboard')}}" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Posts
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('page.dashboard')}}" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Pages
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('admin.dashboard')}}" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Admins
+                    </p>
+                </a>
+            </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->

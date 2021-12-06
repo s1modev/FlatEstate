@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="alert alert-primary text-center mb-5" role="alert" style="font-size: 18px;">
-        Your credits: <span class="font-weight-bold">5 credits</span>
+        Your credits: <span class="font-weight-bold">{{auth()->user()->credits}} credits</span>
     </div>
     <div class="row text-center">
         @foreach ($packages as $package)

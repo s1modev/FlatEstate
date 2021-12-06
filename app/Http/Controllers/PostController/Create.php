@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\PostController;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\StoreProjectRequest;
 use App\Models\Country;
 use App\Models\Image;
@@ -19,7 +20,7 @@ class Create extends Controller
         return view('user.post.create',['countries'=>$countries]);
     }
     
-    public function store(StoreProjectRequest $request){
+    public function store(StorePostRequest $request){
         $user = auth()->user();
         $post = $user->posts()->create($request->validated());
 
@@ -36,6 +37,9 @@ class Create extends Controller
         $avatar = $post->images()->first();
         $post->avatar = $avatar->name;
         $post->save();
+
+        auth()->user()->credits--;
+        auth()->user()->save();
 
         $countries = Country::get();
         return redirect()->route('post.create', ['countries'=>$countries]);

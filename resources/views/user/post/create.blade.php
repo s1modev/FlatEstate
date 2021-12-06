@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="mt-3">
+        <div class="alert alert-primary text-center mb-3" role="alert" style="font-size: 18px;">
+            Your credits: <span class="font-weight-bold">{{auth()->user()->credits}} credits</span>
+        </div>
         <form action="{{route('post.create')}}" method="post">
             @csrf
             <div class="row">
@@ -318,7 +321,8 @@
 @endsection
 
 @section('script')
-    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+            type="text/javascript"></script>
     <script>
         let map;
         function initMap() {

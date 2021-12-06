@@ -1,8 +1,8 @@
 @extends('layouts.user.master')
 
 @section('content')
-    <div class="row mt-4 w-100">
-        <div class="col-lg-8 ml-n1">
+    <div class="row mt-4">
+        <div class="col-lg-8">
             <div>
                 <h4 class="font-weight-bold">{{$post->title}}</h4>
                 <div class="row">
@@ -84,13 +84,13 @@
                         <div class="col-4">
                             <img style="max-height: 100px;" class="img-fluid rounded-circle" src="{{asset('user_avatar/'.$agent->avatar)}}" alt="">
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 px-0">
                             <h5>{{$agent->full_name}}</h5>
                             <br>
                             @if ($agent->phone_number)
-                                <h6><i class="fas fa-phone-alt"></i> {{$agent->phone_number}}</h6>
+                                <h6><i class="fas fa-phone-alt mr-1"></i>{{$agent->phone_number}}</h6>
                             @endif
-                            <h6><i class="fas fa-envelope"></i> {{$agent->email}}</h6>
+                            <h6><i class="fas fa-envelope mr-1"></i>{{$agent->email}}</h6>
                         </div>
                     </div>
                 </div>
@@ -148,6 +148,8 @@
 @endsection
 
 @section('script')
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+        type="text/javascript"></script>
 <script>
         let map;
         function initMap() {

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\PaymentController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Package;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Paypal extends Controller
 {
@@ -35,7 +37,7 @@ class Paypal extends Controller
             ]
         ]);
 
-        //Save created order to database
+        
         
         return response()->json($order);
     }
@@ -43,6 +45,8 @@ class Paypal extends Controller
     public function capture(Request $request){
         $data = json_decode($request->getContent(), true);
         $orderId = $data['orderId'];
+        $package_id = $data['package_id'];
+        $user_id = $data['user_id'];
 
         //init paypal
         $provider = \Srmklive\PayPal\Facades\PayPal::setProvider();
@@ -52,7 +56,19 @@ class Paypal extends Controller
 
         $result = $provider->capturePaymentOrder($orderId);
 
-        //update database
+        $package = Package::where('id', $package_id)->first();
+        $user = User::where('id', $user_id)->first();
+
+        $user->credits = $user->credits + $package->credits;
+        $user->save();
+
+        //Save created order to database
+        $package->orders()->create([
+            'user_id'=>$user_id,
+            'price'=>$package->price,
+            'method'=>'paypal',
+            'status'=>'completed',
+        ]);
 
         return response()->json($result);
     }

@@ -27,6 +27,10 @@ class Stripe extends Controller
             $user->createOrGetStripeCustomer();
             $user->updateDefaultPaymentMethod($paymentMethod);
             $user->charge($package->price*100, $paymentMethod);
+
+            $user->credits = $user->credits + $package->credits;
+            $user->save();
+
             $package->orders()->create([
                 'user_id'=>auth()->user()->id,
                 'price'=>$package->price,
@@ -42,6 +46,6 @@ class Stripe extends Controller
             return back()->with('error', $ex->getMessage());
         }
 
-        return redirect()->route('thank-you');
+        return redirect()->route('post.create');
     }
 }

@@ -16,6 +16,6 @@ class Create extends Controller
     public function store(StorePackageRequest $request){
         Package::create($request->validated());
         
-        return redirect()->route('package.dashbaord',['success'=>'Your package has been created successfully!']);
+        return redirect()->route('package.dashbaord')->with('success','Your package has been created successfully!');
     }
 }

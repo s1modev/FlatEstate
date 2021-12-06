@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto" style="max-width: 900px;">
-        <vueper-slides :dragging-distance="50" fixed-height="450px">
+        <vueper-slides :dragging-distance="50" fixed-height="450px" :touchable="false">
         <vueper-slide
             class="rounded"
             v-for="(image, index) in images"
@@ -28,13 +28,12 @@ import 'vueperslides/dist/vueperslides.css'
                 .then(response=>{
                     this.images=response.data.media
                 })
-            console.log(this.images)
         },
         props:{
             id : {
                 required: true
             }
         },
-        components: { VueperSlides, VueperSlide },
+        components:{ VueperSlides, VueperSlide },
     }
 </script>

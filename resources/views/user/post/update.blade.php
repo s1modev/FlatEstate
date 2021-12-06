@@ -318,7 +318,8 @@
 @endsection
 
 @section('script')
-    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+            type="text/javascript"></script>
     <script>
         let map;
         function initMap() {

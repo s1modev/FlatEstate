@@ -33,6 +33,20 @@
                     @enderror
                 </div>
                 <div class="form-group">
+                    <label for="credits" class="m-0">Credits <strong class="text-danger">*</strong></label>
+                    <div class="input-group">
+                        <input type="number" value="{{$package->credits}}" class="form-control bg-light @error('credits') is-invalid @enderror" placeholder="Credits quantity" name="credits">
+                        <div class="input-group-append">
+                            <span class="input-group-text">$</span>
+                        </div>
+                    </div>
+                    @error('credits')
+                        <p class="text-danger mb-1">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                </div>
+                <div class="form-group">
                     <label for="title" class="m-0">Title <strong class="text-danger">*</strong></label>
                     <input type="text" value="{{$package->title}}" class="form-control bg-light @error('title') is-invalid @enderror" placeholder="Title" name="title">
                     @error('title')

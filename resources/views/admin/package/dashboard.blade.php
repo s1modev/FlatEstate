@@ -45,7 +45,7 @@
                             <a href="{{route('package.update',$package->id)}}" class="btn btn-primary btn-sm mr-2"><i class="fas fa-edit"></i></a>
                             <form action="{{route('package.delete', $package->id)}}" class="d-inline" method="post">
                                 @csrf
-                                <button href="{{route('package.delete', $package->id)}}" class="btn btn-danger btn-sm mr-2"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-danger btn-sm mr-2"><i class="fas fa-trash"></i></button>
                             </form>
                             
                         </td>
@@ -57,6 +57,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="d-flex justify-content-center">
+    {{$packages->links("pagination::bootstrap-4")}}
     </div>
 </div>
     

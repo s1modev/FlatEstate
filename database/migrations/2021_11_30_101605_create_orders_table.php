@@ -20,10 +20,10 @@ class CreateOrdersTable extends Migration
             $table->string('status')->default('pending');
             $table->integer('price');
             $table->string('method');
-            $table->string('card_holder');
-            $table->string('billing_country');
-            $table->string('billing_city');
-            $table->string('billing_address');
+            $table->string('card_holder')->nullable();
+            $table->string('billing_country')->nullable();
+            $table->string('billing_city')->nullable();
+            $table->string('billing_address')->nullable();
             $table->timestamps();
         });
     }

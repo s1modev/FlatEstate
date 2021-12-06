@@ -30,6 +30,7 @@
     // get product
     
     package_id = {{$package->id}};
+    user_id = {{auth()->user()->id}};
     console.log(package_id);
     
 
@@ -55,7 +56,9 @@
             return fetch('/api/paypal/order/capture/', {
                 method: 'post',
                 body:JSON.stringify({
-                    orderId:data.orderID
+                    orderId:data.orderID,
+                    package_id:package_id,
+                    user_id:user_id,
                 })
             }).then(function(res) {
                 return res.json();
@@ -81,16 +84,8 @@
                     return alert(msg); // Show a failure message (try to avoid alerts in production environments)
                 }
 
-                // Successful capture! For demo purposes:
-                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                var transaction = orderData.purchase_units[0].payments.captures[0];
-                alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-
-                // Replace the above to show a success message within this page, e.g.
-                // const element = document.getElementById('paypal-button-container');
-                // element.innerHTML = '';
-                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-                // Or go to another URL:  actions.redirect('thank_you.html');
+                //redirect after the payment
+                window.location = "{{route('post.create')}}";
             });
         }
 

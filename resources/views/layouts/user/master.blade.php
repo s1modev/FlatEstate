@@ -41,8 +41,8 @@
             </ul>
         </div>
 
-        <a href="" class="navbar-brand text-white order-1 mr-5">
-            <img src="{{asset('img/lowgo.png')}}" style="width: 180px; height: 30px;">
+        <a href="" class="navbar-brand text-white order-1 mr-lg-5">
+            <img class="ml-2" src="{{asset('img/lowgo.png')}}" style="width: 180px; height: 30px;">
         </a>
 
         <button class="order-2 navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse order-lg-3 order-4 navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 @auth
-                    <li class="nav-item dropdown ml-4">
+                    <li class="nav-item dropdown ml-lg-4">
                         <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-user"></i> account
                         </a>
@@ -63,7 +63,7 @@
                             <a class="dropdown-item text-dark" href="{{route('pricing')}}">Buy Credits</a>
                         </div>
                     </li>
-                    <li class="nav-item p-0">
+                    <li class="nav-item p-0 mr-lg-2">
                         <form action="{{route('logout')}}" method="post">
                             @csrf
                             <button type="submit" class="remove-button-css nav-link py-2 px-3" style="outline: none;border: 0px; background: transparent; ">Logout</button>
@@ -71,10 +71,10 @@
                     </li>
                 @endauth
                 @guest
-                    <li class="nav-item p-0 ml-5">
+                    <li class="nav-item p-0 ml-lg-5">
                         <a href="{{route('register')}}" class="nav-link py-2 px-3">Register</a>
                     </li>
-                    <li class="nav-item p-0 mr-2">
+                    <li class="nav-item p-0 mr-lg-3">
                         <a href="{{route('login')}}" class="nav-link py-2 px-3">Login</a>
                     </li>
                 @endguest

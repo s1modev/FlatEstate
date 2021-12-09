@@ -32,6 +32,14 @@ Route::post('/register', [AuthController\Register::class, 'store'])->name('regis
 Route::get('/login', [AuthController\Login::class, 'index'])->name('login');
 Route::post('/login', [AuthController\Login::class, 'store'])->name('login');
 
+Route::get('/forgot-password', [AuthController\ForgotPassword::class, 'index'])->name('forgot_password');
+Route::post('/forgot-password', [AuthController\ForgotPassword::class, 'store'])->name('forgot_password');
+
+Route::get('/reset-password', [AuthController\PasswordReset::class, 'index'])->name('password.reset');
+Route::post('/reset-password', [AuthController\PasswordReset::class, 'store'])->name('password.reset');
+
+
+
 Route::post('/logout', [AuthController\Logout::class, 'store'])->name('logout');
 
 Route::get('/settings/account', [SettingsController\Account::class, 'index'])->name('settings.account');

@@ -14,6 +14,12 @@
                             </div>
 
                         @endif
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{session('success')}}
+                            </div>
+
+                        @endif
                         <form action="{{ route('login') }}" method="post">
                             @csrf
                             <div class="form-group">
@@ -29,6 +35,9 @@
                                 @error('password')
                                 <p class="text-danger text-left">{{$message}}</p>
                                 @enderror
+                                <div class="text-left">
+                                    <a href="{{route('forgot_password')}}" class="ml-1 text-left link-primary text-md">Forgot password ?</a>
+                                </div>
                             </div>
                             
                             <input type="submit" value="Login" class="btn btn-primary btn-block btn-lg">

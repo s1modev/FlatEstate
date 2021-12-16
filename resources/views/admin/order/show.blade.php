@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <p>Created At: <strong>{{($order->created_at->format('Y-m-d H:m'))}}</strong></p>
                     <p>Payment method: <strong>{{($order->method)}}</strong></p>
-                    <p>Total: <strong>{{($order->price)}}</strong></p>
+                    <p>Total: <strong>${{($order->price)}}</strong></p>
                     <p>Status: <strong>{{($order->status)}}</strong></p>
                     <p>Client Name: <strong>{{($user->full_name)}}</strong></p>
                 </div>

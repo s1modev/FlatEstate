@@ -31,7 +31,6 @@
     
     package_id = {{$package->id}};
     user_id = {{auth()->user()->id}};
-    console.log(package_id);
     
 
     // Render the PayPal button into #paypal-button-container

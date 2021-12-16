@@ -43,7 +43,7 @@
                             <input type="submit" value="Login" class="btn btn-primary btn-block btn-lg">
                         </form>
                     </div>
-                    <a href="{{route('register')}}" class="text-primary text-center mb-2" style="font-size: 16px" >Already have an account ?</a>
+                    <a href="{{route('register')}}" class="text-primary text-center mb-2" style="font-size: 16px" >You don't have an account?</a>
                 </div>
             </div>
         </div>

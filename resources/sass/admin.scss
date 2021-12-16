@@ -9,3 +9,14 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+//over rinding datatables css
+.dataTables_processing {
+    background: transparent !important;
+}
+
+div .dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    color: #333 !important;
+    background: #f7f7f7 !important;
+    
+}

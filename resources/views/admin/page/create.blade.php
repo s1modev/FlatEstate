@@ -45,7 +45,7 @@
                 </div>
                 <div class="card-body">
                     <button class="btn btn-primary mr-1">Submit</button>
-                    <button class="btn btn-danger mx-1">Cancel</button>
+                    <a class="btn btn-danger ml-3" href="{{route('page.dashboard')}}">Cancel</a>
                 </div>
             </div>
             <div class="mt-2 card">

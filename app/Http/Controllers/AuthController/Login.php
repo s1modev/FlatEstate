@@ -22,7 +22,7 @@ class Login extends Controller
             return back()->with('status', 'Invalid login details');
         }else{
             $request->session()->put('logged_user', auth()->user()->id);
-            return redirect()->route('login');
+            return redirect()->route('home');
         }
     }
 }

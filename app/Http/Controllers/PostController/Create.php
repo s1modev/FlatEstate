@@ -41,8 +41,7 @@ class Create extends Controller
         auth()->user()->credits--;
         auth()->user()->save();
 
-        $countries = Country::get();
-        return redirect()->route('post.create', ['countries'=>$countries]);
+        return redirect()->route('posts');
     }
 
     public function checkSlug(Request $request){

@@ -26,7 +26,6 @@
             fileChange(event){
                 const file = event.target.files[0]
                 this.image = URL.createObjectURL(file)
-                console.log(this.image)
             },
             deleteImage(){
                 this.image = '/user_avatar/user.jpg'

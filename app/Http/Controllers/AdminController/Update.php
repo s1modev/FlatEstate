@@ -19,7 +19,6 @@ class Update extends Controller
             'name'=>$request->name,
             'username'=>$request->username,
             'email'=>$request->email,
-            'password'=>Hash::make($request->password),
         ]);
         return redirect()->route('admin.dashboard')->with('success', 'Admin has been update successfully!');
     }

@@ -1,10 +1,10 @@
 @component('mail::message')
-# Introduction
 
-name: {{$name}}
+Name: {{$name}}<br>
+Email: {{$email}}<br>
+Phone Number: {{$phone_number}}<br>
 
 message: {{$message}}
 
-Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

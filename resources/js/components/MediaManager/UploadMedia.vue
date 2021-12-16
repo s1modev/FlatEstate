@@ -40,7 +40,6 @@
         },
         methods:{
             fileChange(event){
-                console.log(event.target.files)
                 let files = event.target.files
                 for(var i=0; i < files.length; i++){
                     let formData = new FormData
@@ -51,14 +50,12 @@
                             this.media.push({url:url, name:response.data.name});
                         })
                 }
-                console.log(this.media)
             },
             remove(index){
                 this.media.splice(index,1)
             },
         },
         mounted() {
-            console.log('Component mounted.')
         },
         props:{
             error:'',

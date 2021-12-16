@@ -49,3 +49,95 @@ body{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+#estate-page{
+
+    .product-imgs{
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    .img-display {
+        overflow: hidden;
+    }
+
+    .img-showcase {
+        display: flex;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .img-showcase img {
+        min-width: 100%;
+    }
+
+    .img-select {
+        display: flex;
+    }
+
+    .img-item {
+        margin: 0.3rem;
+    }
+
+    .img-item:hover {
+        opacity: 0.8;
+    }
+}
+
+
+#home-section {
+    background: url(../img/home.jpg) no-repeat center;
+    position: page;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    h1{
+        display : inline-block;
+        margin-top: 110px;
+    }
+
+}
+
+#explore-section{
+    p{
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #explore-title{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #home-title{
+        font-size: 52x;
+    }
+}
+
+.no-link{
+    pointer-events: none;
+    cursor: text;
+    text-decoration: none;
+    color: black;
+}
+
+#footer {
+    background: url(../img/footer.jpg) no-repeat center center;
+    position: page;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+
+}

@@ -31,6 +31,6 @@ class AgentMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails/agent', ['name'=>$this->name, 'email'=>$this->email, 'phone_number'=>$this->phone_number, 'message'=>$this->message]);
+        return $this->from($this->email)->markdown('emails/agent', ['name'=>$this->name, 'email'=>$this->email, 'phone_number'=>$this->phone_number, 'message'=>$this->message]);
     }
 }

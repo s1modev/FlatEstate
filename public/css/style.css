@@ -47,3 +47,73 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+#estate-page .product-imgs {
+  width: 100%;
+}
+#estate-page img {
+  width: 100%;
+  display: block;
+}
+#estate-page .img-display {
+  overflow: hidden;
+}
+#estate-page .img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+#estate-page .img-showcase img {
+  min-width: 100%;
+}
+#estate-page .img-select {
+  display: flex;
+}
+#estate-page .img-item {
+  margin: 0.3rem;
+}
+#estate-page .img-item:hover {
+  opacity: 0.8;
+}
+
+#home-section {
+  background: url(/images/home.jpg?f19c6944505494bb552f096cc4552998) no-repeat center;
+  position: page;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+}
+#home-section h1 {
+  display: inline-block;
+  margin-top: 110px;
+}
+
+#explore-section p {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  #explore-title {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #home-title {
+    font-size: 52x;
+  }
+}
+.no-link {
+  pointer-events: none;
+  cursor: text;
+  text-decoration: none;
+  color: black;
+}
+
+#footer {
+  background: url(/images/footer.jpg?39271b50fbc4fd0dea882a8c16d7c033) no-repeat center center;
+  position: page;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}

@@ -224,7 +224,7 @@
                         </div>
                         <div class="card-body">
                             <button class="btn btn-primary" type='submit'>Publish</button>
-                            <button class="btn btn-danger ml-3">Cancel</button>
+                            <a class="btn btn-danger ml-3" href="{{route('posts')}}">Cancel</a>
                         </div>
                     </div>
                     <div class="card">

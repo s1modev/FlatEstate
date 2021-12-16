@@ -25,7 +25,8 @@ class Login extends Controller
         }else{
             if(Hash::check($request->password, $admin->password)){
                 $request->session()->put('logged_admin', $admin->id);
-                return redirect()->route('package.dashbaord');
+                $request->session()->put('admin_name', $admin->name);
+                return redirect()->route('admin.home.dashboard');
             }else{
                 return back()->with('status','Invalid login informations!');
             }

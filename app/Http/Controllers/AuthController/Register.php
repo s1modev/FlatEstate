@@ -32,6 +32,6 @@ class Register extends Controller
         Auth::attempt($request->only('email','password'));
         $request->session()->put('logged_user', auth()->user()->id);
 
-        return redirect()->route('register');
+        return redirect()->route('home');
     }
 }

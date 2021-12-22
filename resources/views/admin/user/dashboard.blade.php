@@ -34,23 +34,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{--
-                    @foreach ($users as $user)
-                    <tr class="">
-                        <th scope="row" class="align-middle">{{$user->id}}</th>
-                        <td class="align-middle">{{$user->full_name}}</td>
-                        <td class="align-middle">{{$user->email}}</td>
-                        <td class="align-middle">{{$user->phone_number}}</td>
-                        <td class="align-middle">
-                            <form action="{{route('user.delete', $user->id)}}" class="d-inline" method="post">
-                                @csrf
-                                <button href="{{route('user.delete', $user->id)}}" class="btn btn-danger btn-sm mr-2"><i class="fas fa-trash"></i></button>
-                            </form>
-                            
-                        </td>
-                    </tr>
-                    @endforeach
-                    --}}
                     
                 </tbody>
                 </table>
@@ -58,9 +41,7 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center">
-        {{$users->links("pagination::bootstrap-4")}}
-    </div>
+
 </div>
     
 @endsection
@@ -85,7 +66,7 @@ $(document).ready( function () {
             { data: 'full_name', name: 'full_name', className: 'align-middle' },
             { data: 'email', name: 'email', className: 'align-middle' },
             { data: 'phone_number', name: 'phone_number', className: 'align-middle' },
-            { data: 'action', name: 'action', className: 'align-middle' },
+            { data: 'action', name: 'action', className: 'align-middle', 'searchable': false},
         ]
     });
 });

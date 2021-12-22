@@ -66,7 +66,7 @@ $(document).ready( function () {
             { data: 'name', name: 'name', className: 'align-middle' },
             { data: 'username', name: 'username', className: 'align-middle' },
             { data: 'email', name: 'email', className: 'align-middle' },
-            { data: 'action', name: 'action', className: 'align-middle' },
+            { data: 'action', name: 'action', className: 'align-middle', 'searchable': false},
             
         ]
     });

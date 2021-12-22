@@ -67,7 +67,7 @@ $(document).ready( function () {
             { data: 'price', name: 'price', className: 'align-middle' },
             { data: 'status', name: 'status', className: 'align-middle' },
             { data: 'created_at', name: 'created_at', className: 'align-middle' },
-            { data: 'action', name: 'action', className: 'align-middle' },
+            { data: 'action', name: 'action', className: 'align-middle', 'searchable': false},
             
         ]
     });

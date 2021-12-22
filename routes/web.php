@@ -156,6 +156,7 @@ Route::prefix('admin')->middleware('admin.auth')->group(function(){
 
     Route::post('/delete/{admin}', [AdminController\Delete::class, 'destroy'])->name('admin.delete');
 
+
 });
 
 Route::get('/admin/login', [AdminController\Login::class, 'index'])->name('admin.login');

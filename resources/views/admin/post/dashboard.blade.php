@@ -34,33 +34,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{--
-                    @foreach ($posts as $post)
-                    <tr class="">
-                        <th scope="row" class="align-middle">{{$post->id}}</th>
-                        <td class="align-middle">{{$post->title}}</td>
-                        <td class="align-middle">{{$post->category}}</td>
-                        <td class="align-middle">{{$post->country}}</td>
-                        <td class="align-middle">
-                            <a href="{{route('post.show',$post->slug)}}" class="btn btn-primary btn-sm mr-2"><i class="fas fa-eye"></i></a>
-                            <form action="{{route('admin.post.delete', $post->id)}}" class="d-inline" method="post">
-                                @csrf
-                                <button class="btn btn-danger btn-sm mr-2"><i class="fas fa-trash"></i></button>
-                            </form>
-                            
-                        </td>
-                    </tr>
-                    @endforeach
-                    --}}
+
                     
                 </tbody>
                 </table>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="d-flex justify-content-center">
-        {{$posts->links("pagination::bootstrap-4")}}
     </div>
 </div>
     
@@ -86,7 +66,7 @@ $(document).ready( function () {
             { data: 'title', name: 'title', className: 'align-middle' },
             { data: 'category', name: 'category', className: 'align-middle' },
             { data: 'country', name: 'country', className: 'align-middle' },
-            { data: 'action', name: 'action', className: 'align-middle' },
+            { data: 'action', name: 'action', className: 'align-middle', 'searchable': false},
             
         ]
     });

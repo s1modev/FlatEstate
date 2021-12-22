@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
                 <a href="{{route('package.dashboard')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-money-check"></i>
                     <p>
                         Packages
                     </p>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
                 <a href="{{route('user.dashboard')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-users"></i>
                     <p>
                         Users
                     </p>
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
                 <a href="{{route('order.dashboard')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-receipt"></i>
                     <p>
                         Orders
                     </p>
@@ -108,7 +108,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
                 <a href="{{route('admin.post.dashboard')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-house-user"></i>
                     <p>
                         Posts
                     </p>
@@ -116,7 +116,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
                 <a href="{{route('page.dashboard')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-file-alt"></i>
                     <p>
                         Pages
                     </p>
@@ -124,7 +124,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
                 <a href="{{route('admin.dashboard')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-user-shield"></i>
                     <p>
                         Admins
                     </p>

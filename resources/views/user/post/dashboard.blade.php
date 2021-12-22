@@ -59,7 +59,7 @@
     <div class="card-group row w-100 mx-auto">
             @foreach($posts as $post)
             
-                <div class="col-12 col-md-6 col-xl-4 mx-auto mx-lg-n1" style="max-width: 24rem;">
+                <div class="col-12 col-md-6 col-xl-4 mx-auto mx-lg-n1" style="max-width: 23.6rem;">
                 <a href="{{route('post.show', $post->slug)}}" class="text-decoration-none text-dark">
                     <div class="card align-self-center w-100">
                         <div class="position-relative">
@@ -74,19 +74,17 @@
                                 </div>
                                 <div class="col">
                                     <div class="text-right"><i class="far fa-calendar-alt"></i> {{$post->created_at->format('Y-m-d')}}</div>
-                                </div>
+                                </div> 
                             </div>
                             <h5 class="display-5 ellipsis">{{$post->title}}</h5>
                             <p class="ellipsis"><i class="fas fa-map-marker-alt mr-2"></i>{{$post->country}}, {{$post->city}}</p>
                             <div class="row" style="font-size:18px">
-                                <div class="col-4">
+                                <div class="col-6 text-center">
+                                    
                                     <i class="fas fa-bed mr-2"></i><span>{{$post->bedrooms_number}}</span>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6 text-center">
                                     <i class="fas fa-bath mr-2"></i><span>{{$post->bathrooms_number}}</span>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fas fa-ruler-combined mr-2"></i><span>{{$post->surface}}m²</span>
                                 </div>
                             </div>
                         </div>

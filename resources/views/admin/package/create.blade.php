@@ -36,9 +36,6 @@
                     <label for="credits" class="m-0">Credits <strong class="text-danger">*</strong></label>
                     <div class="input-group">
                         <input type="number" value="{{old('credits')}}" class="form-control bg-light @error('credits') is-invalid @enderror" placeholder="Credits quantity" name="credits">
-                        <div class="input-group-append">
-                            <span class="input-group-text">$</span>
-                        </div>
                     </div>
                     @error('credits')
                         <p class="text-danger mb-1">

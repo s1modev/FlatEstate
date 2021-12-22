@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 class Dashboard extends Controller
 {
     public function index(){
-        $packages = Package::paginate(10);
-        return view('admin.package.dashboard',['packages'=>$packages]);
+        return view('admin.package.dashboard');
     }
 
     public function datatable(){

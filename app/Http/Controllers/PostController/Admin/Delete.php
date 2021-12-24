@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 
 class Delete extends Controller
 {
-    public function detroy(Post $post){
+    
+    public function destroy(Request $request){
+        $post = Post::where('id', $request->id)->first();
         $images = $post->images()->get();
         $images->each->delete();
         $post->delete();
-        
-        return back()->with('success', 'The post has been deleted!');
+        return back()->with('success', 'The record has been deleted successfully!');
     }
 }

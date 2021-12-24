@@ -245,8 +245,8 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="category" id="apartement" value="apartement" @if(old('category')=='apartement') checked @endif>
-                                        <label class="" for="apartement">Apartment</label>
+                                        <input class="form-check-input" type="radio" name="category" id="apartment" value="apartment" @if(old('category')=='apartment') checked @endif>
+                                        <label class="" for="apartment">Apartment</label>
                                     </div>
                                 </div>
                                 <div class="col-6">

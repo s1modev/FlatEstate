@@ -17,10 +17,8 @@ class Dashboard extends Controller
         return datatables()->of($posts)
             ->addColumn('action', function($row) {
                 $action = '<a href="'.route("post.show",$row->slug).'" class="btn btn-success btn-sm mr-2"><i class="fas fa-eye"></i></a>';
-                $action .= '<form action="'.route('admin.post.delete', $row->id).'" class="d-inline" method="post">';
-                $action .= '<input type="hidden" name="_token" value="'.csrf_token().'">';
-                $action .= '<button class="btn btn-danger btn-sm mr-2"><i class="fas fa-trash"></i></button>';
-                $action .= '</form>';
+                $action .= '<a data-id="'.$row->id.'" class="btn btn-danger btn-sm mr-2 delete_confirmation" data-toggle="modal" data-target="#delete_confirmation"><i class="fas fa-trash"></i></a>';
+
                 return $action;
             })
             ->escapeColumns([])->make(true);

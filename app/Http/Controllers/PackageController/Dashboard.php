@@ -30,10 +30,7 @@ class Dashboard extends Controller
             })
             ->addColumn('action', function($row) {
                 $action = '<a href="'.route("package.update",$row->id).'" class="btn btn-primary btn-sm mr-2"><i class="fas fa-edit"></i></a>';
-                $action .= '<form action="'.route('package.delete', $row->id).'" class="d-inline" method="post">';
-                $action .= '<input type="hidden" name="_token" value="'.csrf_token().'">';
-                $action .= '<button class="btn btn-danger btn-sm mr-2"><i class="fas fa-trash"></i></button>';
-                $action .= '</form>';
+                $action .= '<a data-id="'.$row->id.'" class="btn btn-danger btn-sm mr-2 delete_confirmation" data-toggle="modal" data-target="#delete_confirmation"><i class="fas fa-trash"></i></a>';
                 return $action;
             })
             ->escapeColumns([])->make(true);

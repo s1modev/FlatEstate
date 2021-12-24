@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class Delete extends Controller
 {
-    public function destroy(Post $post){
+    public function destroy(Request $request){
+        $post = Post::where('id', $request->id)->first();
         if($post->user_id == auth()->user()->id){
             $images = $post->images()->get();
             $images->each->delete();

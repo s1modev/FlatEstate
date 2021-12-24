@@ -43,10 +43,41 @@
         </div>
     </div>
 </div>
-    
+
+<div class="modal fade" id="delete_confirmation" role="dialog" aria-hidden="true">
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="exampleModalLongTitle">Delete confirmation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to delete this record?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <form action="{{route('order.delete')}}" class="d-inline" method="post">
+                @csrf
+                <input name="id" id="id" type="text" hidden>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            
+        </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @section('script')
+<script>
+    $(document).on('click','.delete_confirmation',function(){
+        let id = $(this).attr('data-id');
+        $('#id').val(id);
+    });
+</script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 
 <script>

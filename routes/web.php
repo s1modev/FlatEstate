@@ -42,7 +42,7 @@ Route::middleware('auth.check')->group(function(){
     Route::get('/post/update/{post}', [PostController\Update::class, 'index'])->name('post.update');
     Route::post('/post/update/{post}', [PostController\Update::class, 'update'])->name('post.update');
 
-    Route::post('/post/delete/{post}', [PostController\Delete::class, 'destroy'])->name('post.delete');
+    Route::post('/post/delete', [PostController\Delete::class, 'destroy'])->name('post.delete');
 
     Route::post('/logout', [AuthController\Logout::class, 'store'])->name('logout');
 
@@ -103,25 +103,25 @@ Route::prefix('admin')->middleware('admin.auth')->group(function(){
     Route::get('/package/update/{package}', [PackageController\Update::class, 'index'])->name('package.update');
     Route::post('/package/update/{package}', [PackageController\Update::class, 'update'])->name('package.update');
 
-    Route::post('/package/delete/{package}', [PackageController\Delete::class, 'destroy'])->name('package.delete');
+    Route::post('/package/delete', [PackageController\Delete::class, 'destroy'])->name('package.delete');
 
 
     Route::get('/users', [UserController\Dashboard::class, 'index'])->name('user.dashboard');
     Route::get('/users/datatable', [UserController\Dashboard::class, 'datatable'])->name('user.datatable');
 
-    Route::post('/user/delete/{user}', [UserController\Delete::class, 'destroy'])->name('user.delete');
+    Route::post('/user/delete', [UserController\Delete::class, 'destroy'])->name('user.delete');
 
     Route::get('/orders', [OrderController\Dashboard::class, 'index'])->name('order.dashboard');
     Route::get('/orders/datatable', [OrderController\Dashboard::class, 'datatable'])->name('order.datatable');
 
-    Route::post('/order/delete/{order}', [OrderController\Delete::class, 'destroy'])->name('order.delete');
+    Route::post('/order/delete', [OrderController\Delete::class, 'destroy'])->name('order.delete');
     Route::get('/order/{order}', [OrderController\Show::class, 'index'])->name('order.show');
 
 
     Route::get('/posts', [PostController\Admin\Dashboard::class, 'index'])->name('admin.post.dashboard');
     Route::get('/posts/datatable', [PostController\Admin\Dashboard::class, 'datatable'])->name('admin.post.datatable');
 
-    Route::post('/post/delete/{post}', [PostController\Admin\Delete::class, 'detroy'])->name('admin.post.delete');
+    Route::post('/post/delete', [PostController\Admin\Delete::class, 'destroy'])->name('admin.post.delete');
 
     Route::get('/pages', [PageController\Dashboard::class, 'index'])->name('page.dashboard');
     Route::get('/pages/datatable', [PageController\Dashboard::class, 'datatable'])->name('page.datatable');
@@ -134,7 +134,7 @@ Route::prefix('admin')->middleware('admin.auth')->group(function(){
     Route::get('/page/update/{page}', [PageController\Update::class, 'index'])->name('page.update');
     Route::post('/page/update/{page}', [PageController\Update::class, 'update'])->name('page.update');
 
-    Route::post('/page/delete/{page}', [PageController\delete::class, 'destroy'])->name('page.delete');
+    Route::post('/page/delete', [PageController\delete::class, 'destroy'])->name('page.delete');
 
     Route::get('/dashboard', [AdminController\Dashboard::class, 'index'])->name('admin.dashboard');
     Route::get('/admins/datatable', [AdminController\Dashboard::class, 'datatable'])->name('admin.datatable');
@@ -154,7 +154,7 @@ Route::prefix('admin')->middleware('admin.auth')->group(function(){
     Route::get('/update/{admin}', [AdminController\Update::class, 'index'])->name('admin.update');
     Route::post('/update/{admin}', [AdminController\Update::class, 'update'])->name('admin.update');
 
-    Route::post('/delete/{admin}', [AdminController\Delete::class, 'destroy'])->name('admin.delete');
+    Route::post('/delete', [AdminController\Delete::class, 'destroy'])->name('admin.delete');
 
 
 });

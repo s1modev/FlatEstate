@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 
 class Delete extends Controller
 {
-    public function destroy(User $user){
-        $user->delete();
-        return back()->with('success','The user has been deleted successfully');
+    public function destroy(Request $request){
+        User::where('id', $request->id)->delete();
+        return back()->with('success', 'The record has been deleted successfully!');
     }
+
 }

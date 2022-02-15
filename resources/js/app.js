@@ -1,8 +1,8 @@
 require('./bootstrap');
 
 import { createApp } from 'vue';
-import UploadMedia from './components/MediaManager/UploadMedia.vue';
-import UpdateMedia from './components/MediaManager/UpdateMedia.vue';
+import { UploadMedia, UpdateMedia } from 'vue-media-upload';
+
 import MediaSlider from './components/MediaManager/MediaSlider.vue';
 import UpdateAvatar from './components/MediaManager/UpdateAvatar.vue';
 

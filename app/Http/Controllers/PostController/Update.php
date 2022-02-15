@@ -34,8 +34,8 @@ class Update extends Controller
                 }
             }
 
-            if(isset($request->media)){
-                foreach($request->media as $image){
+            if(isset($request->added_media)){
+                foreach($request->added_media as $image){
                 
                     $from = public_path('tmp/uploads/'.$image);
                     $to = public_path('post_images/'.$image);
@@ -49,8 +49,10 @@ class Update extends Controller
             
             if(isset($request->deleted_media)){
                 foreach($request->deleted_media as $deleted_media){
-                    File::delete(public_path('post_images/'.$deleted_media));
                     Image::where('name', $deleted_media)->delete();
+
+                    //This line is commented because, most of the images in this demo are shared between multiple posts.
+                    //File::delete(public_path('post_images/'.$deleted_media));
                 }
             }
             

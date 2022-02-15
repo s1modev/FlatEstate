@@ -44,7 +44,7 @@
                             </div>
                             <div class="form-group ">
                                 <label for="description" class="m-0">Description <strong class="text-danger">*</strong></label>
-                                <textarea class="form-control" id="description" name="description" rows="3">{{$post->description}}</textarea> 
+                                <textarea class="form-control" id="description" name="description" rows="6">{{$post->description}}</textarea> 
                                 @error('description')
                                     <p class="text-danger mb-1">
                                         {{ $message }}
@@ -53,7 +53,12 @@
                             </div>
                             
                             <div id="app">
-                                <update-media id="{{$post->id}}" error="@error('media'){{$message}}@enderror"></update-media>
+                                <update-media 
+                                    server="/api/image/upload"
+                                    media_file_path="/post_images"
+                                    media_server="/api/media/{{$post->id}}" 
+                                    error="@error('media'){{$message}}@enderror">
+                                </update-media>
                             </div>
                             
                         </div>

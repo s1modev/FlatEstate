@@ -73,9 +73,7 @@
             id:{
                 required : true
             },
-            props:{
-                error:'',
-            },
+            error:'',
         },
         mounted() {
             axios.post('/api/media/'+this.id)

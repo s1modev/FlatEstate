@@ -16,15 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+
+Route::middleware('auth.check')->group(function(){
+
+    //image upload
+    Route::post('/image/upload', [ImageController::class, 'store'])->name('image.upload');
+    Route::post('/media/{post}', [ImageController::class, 'getImages'])->name('post.images');
+
+    Route::group(['prefix'=>'paypal'], function(){
+        Route::post('/order/create', [PaymentController\Paypal::class, 'create']);
+        Route::post('/order/capture', [PaymentController\Paypal::class, 'capture']);
+    });
+
 });
-
-//image upload
-Route::post('/image/upload', [ImageController::class, 'store'])->name('image.upload');
-Route::post('/media/{post}', [ImageController::class, 'getImages'])->name('post.images');
-
-Route::group(['prefix'=>'paypal'], function(){
-    Route::post('/order/create', [PaymentController\Paypal::class, 'create']);
-    Route::post('/order/capture', [PaymentController\Paypal::class, 'capture']);
-}); 

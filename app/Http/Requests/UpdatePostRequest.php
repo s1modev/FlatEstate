@@ -28,6 +28,7 @@ class UpdatePostRequest extends FormRequest
             'slug' => ['required', 'max:300', 'unique:posts,slug,'.$this->route('post')->id],
             'deal' => 'required|max:50',
             'description' => 'required|max:4000',
+            'media'=>'required',
             'country' => 'required|max:50',
             'city' => 'required|max:255',
             'address' => 'max:255',

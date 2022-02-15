@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group ">
                                 <label for="description" class="m-0">Description <strong class="text-danger">*</strong></label>
-                                <textarea class="form-control" id="description" name="description" rows="6" style="white-space: pre-line">{{old('description')}}</textarea> 
+                                <textarea class="form-control bg-light @error('description') is-invalid @enderror" id="description" name="description" rows="6" style="white-space: pre-line">{{old('description')}}</textarea> 
                                 @error('description')
                                     <p class="text-danger mb-1">
                                         {{ $message }}
@@ -56,7 +56,10 @@
                             </div>
                             
                             <div id="app">
-                                <upload-media error="@error('media'){{$message}}@enderror"></upload-media>
+                                <upload-media
+                                    server="/api/image/upload"
+                                    error="@error('media'){{$message}}@enderror"
+                                ></upload-media> 
                             </div>
                             
                         </div>

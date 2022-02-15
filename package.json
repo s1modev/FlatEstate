@@ -28,6 +28,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4",
         "admin-lte": "^3.1.0",
+        "vue-media-upload": "^1.0.3",
         "vueperslides": "^3.3.2"
     }
 }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Admin;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class AdminSeeder extends Seeder
 {
@@ -17,9 +18,9 @@ class AdminSeeder extends Seeder
         $admins = [
             [
                 'name'=>'Carl Ormand',
-                'username'=>'simodev',
-                'email'=>'simodev@gmail.com',
-                'password'=>'$2y$10$pZq5vK5/OqBJRM0DsI6F6.NNWjbt.9gamxot2Jc9v73qJOiLT6eme',
+                'username'=>'admin',
+                'email'=>'admin@demo.com',
+                'password'=>Hash::make('password'),
             ]
         ];
 

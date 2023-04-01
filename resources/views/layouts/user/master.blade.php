@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" >
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/fav.png') }}">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 

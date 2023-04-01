@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Image;
 use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -18,7 +17,7 @@ class PostSeeder extends Seeder
     {
         $posts = [
             [
-                'id'=>1,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur aliquet quam id dui posuere blandit',
                 'slug'=>'curabitur-aliquet-quam-id-dui-posuere-blandit',
@@ -48,7 +47,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>2,
+                
                 'user_id'=>5,
                 'title'=>'Quisque velit nisi, pretium ut lacinia in, elementum id enim',
                 'slug'=>'quisque-velit-nisi-pretium-ut-lacinia-in-elementum-id-enim',
@@ -78,7 +77,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>3,
+                
                 'user_id'=>5,
                 'title'=>'Praesent sapien massa, convallis a pellentesque nec',
                 'slug'=>'Praesent sapien massa, convallis a pellentesque nec',
@@ -108,7 +107,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>4,
+                
                 'user_id'=>5,
                 'title'=>'Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada',
                 'slug'=>'pellentesque-in-ipsum-id-orci-porta-dapibus-donec-sollicitudin-molestie-malesuada-1',
@@ -138,7 +137,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>5,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit',
                 'slug'=>'curabitur-aliquet-quam-id-dui-posuere-blandit-curabitur-aliquet-quam-id-dui-posuere-blandit-1',
@@ -168,7 +167,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>6,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus',
                 'slug'=>'curabitur-non-nulla-sit-amet-nisl-tempus-convallis-quis-ac-lectus',
@@ -198,7 +197,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>7,
+                
                 'user_id'=>5,
                 'title'=>'Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada',
                 'slug'=>'pellentesque-in-ipsum-id-orci-porta-dapibus-donec-sollicitudin-molestie-malesuada',
@@ -228,7 +227,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>9,
+                
                 'user_id'=>5,
                 'title'=>'Cras ultricies ligula sed magna dictum porta. Quisque velit nisi',
                 'slug'=>'cras-ultricies-ligula-sed-magna-dictum-porta-quisque-velit-nisi',
@@ -258,7 +257,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>10,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit',
                 'slug'=>'curabitur-aliquet-quam-id-dui-posuere-blandit-curabitur-aliquet-quam-id-dui-posuere-blandit',
@@ -288,7 +287,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>11,
+                
                 'user_id'=>5,
                 'title'=>'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere',
                 'slug'=>'vestibulum-ante-ipsum-primis-in-faucibus-orci-luctus-et-ultrices-posuere',
@@ -323,7 +322,7 @@ class PostSeeder extends Seeder
 
 
             [
-                'id'=>12,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit',
                 'slug'=>'curabitur-aliquet-quam-id-dui-posuere-blandit-curabitur-aliquet-quam-id-dui-posuere-blandit-1',
@@ -353,7 +352,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>13,
+                
                 'user_id'=>5,
                 'title'=>'Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada',
                 'slug'=>'pellentesque-in-ipsum-id-orci-porta-dapibus-donec-sollicitudin-molestie-malesuada',
@@ -383,7 +382,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>14,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit',
                 'slug'=>'curabitur-aliquet-quam-id-dui-posuere-blandit-curabitur-aliquet-quam-id-dui-posuere-blandit',
@@ -413,7 +412,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>15,
+                
                 'user_id'=>5,
                 'title'=>'Praesent sapien massa, convallis a pellentesque nec',
                 'slug'=>'Praesent sapien massa, convallis a pellentesque nec',
@@ -443,7 +442,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>16,
+                
                 'user_id'=>5,
                 'title'=>'Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada',
                 'slug'=>'pellentesque-in-ipsum-id-orci-porta-dapibus-donec-sollicitudin-molestie-malesuada-1',
@@ -473,7 +472,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>17,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus',
                 'slug'=>'curabitur-non-nulla-sit-amet-nisl-tempus-convallis-quis-ac-lectus',
@@ -504,7 +503,7 @@ class PostSeeder extends Seeder
             ],
             
             [
-                'id'=>18,
+                
                 'user_id'=>5,
                 'title'=>'Curabitur aliquet quam id dui posuere blandit',
                 'slug'=>'curabitur-aliquet-quam-id-dui-posuere-blandit',
@@ -534,7 +533,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>19,
+                
                 'user_id'=>5,
                 'title'=>'Quisque velit nisi, pretium ut lacinia in, elementum id enim',
                 'slug'=>'quisque-velit-nisi-pretium-ut-lacinia-in-elementum-id-enim',
@@ -564,7 +563,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>20,
+                
                 'user_id'=>5,
                 'title'=>'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere',
                 'slug'=>'vestibulum-ante-ipsum-primis-in-faucibus-orci-luctus-et-ultrices-posuere',
@@ -594,7 +593,7 @@ class PostSeeder extends Seeder
                 'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'id'=>21,
+                
                 'user_id'=>5,
                 'title'=>'Cras ultricies ligula sed magna dictum porta. Quisque velit nisi',
                 'slug'=>'cras-ultricies-ligula-sed-magna-dictum-porta-quisque-velit-nisi',
@@ -628,617 +627,6 @@ class PostSeeder extends Seeder
             
         ];
 
-        $post_images = [
-            [
-                'post_id'=>'1',
-                'name'=>'01.jpg',
-            ],
-            [
-                'post_id'=>'1',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'1',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'1',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'1',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'1',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'1',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'2',
-                'name'=>'02.jpg',
-            ],
-            [
-                'post_id'=>'2',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'2',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'2',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'2',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'2',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'2',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'3',
-                'name'=>'03.jpg',
-            ],
-            [
-                'post_id'=>'3',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'3',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'3',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'3',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'3',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'3',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            [
-                'post_id'=>'4',
-                'name'=>'04.jpg',
-            ],
-            [
-                'post_id'=>'4',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'4',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'4',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'4',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'4',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'4',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'5',
-                'name'=>'05.jpg',
-            ],
-            [
-                'post_id'=>'5',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'5',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'5',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'5',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'5',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'5',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'6',
-                'name'=>'06.png',
-            ],
-            [
-                'post_id'=>'6',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'6',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'6',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'6',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'6',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'6',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'7',
-                'name'=>'07.jpeg',
-            ],
-            [
-                'post_id'=>'7',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'7',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'7',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'7',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'7',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'7',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'9',
-                'name'=>'09.jpg',
-            ],
-            [
-                'post_id'=>'9',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'9',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'9',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'9',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'9',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'9',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'10',
-                'name'=>'010.jpg',
-            ],
-            [
-                'post_id'=>'10',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'10',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'10',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'10',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'10',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'10',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'11',
-                'name'=>'011.jpeg',
-            ],
-            [
-                'post_id'=>'11',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'11',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'11',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'11',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'11',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'11',
-                'name'=>'106.jpg',
-            ],
-
-
-
-            /* ****************************************** */
-            /* ****************************************** */
-            /* ****************************************** */
-            /* ****************************************** */
-
-
-
-
-            [
-                'post_id'=>'12',
-                'name'=>'01.jpg',
-            ],
-            [
-                'post_id'=>'12',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'12',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'12',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'12',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'12',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'12',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'13',
-                'name'=>'02.jpg',
-            ],
-            [
-                'post_id'=>'13',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'13',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'13',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'13',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'13',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'13',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'14',
-                'name'=>'03.jpg',
-            ],
-            [
-                'post_id'=>'14',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'14',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'14',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'14',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'14',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'14',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            [
-                'post_id'=>'15',
-                'name'=>'04.jpg',
-            ],
-            [
-                'post_id'=>'15',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'15',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'15',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'15',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'15',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'15',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'16',
-                'name'=>'05.jpg',
-            ],
-            [
-                'post_id'=>'16',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'16',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'16',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'16',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'16',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'16',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-
-            [
-                'post_id'=>'17',
-                'name'=>'06.png',
-            ],
-            [
-                'post_id'=>'17',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'17',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'17',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'17',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'17',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'17',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'18',
-                'name'=>'07.jpeg',
-            ],
-            [
-                'post_id'=>'18',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'18',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'18',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'18',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'18',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'18',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'19',
-                'name'=>'09.jpg',
-            ],
-            [
-                'post_id'=>'19',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'19',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'19',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'19',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'19',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'19',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'20',
-                'name'=>'010.jpg',
-            ],
-            [
-                'post_id'=>'20',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'20',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'20',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'20',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'20',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'20',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-            [
-                'post_id'=>'21',
-                'name'=>'011.jpeg',
-            ],
-            [
-                'post_id'=>'21',
-                'name'=>'101.jpg',
-            ],
-            [
-                'post_id'=>'21',
-                'name'=>'102.jpg',
-            ],
-            [
-                'post_id'=>'21',
-                'name'=>'103.jpg',
-            ],
-            [
-                'post_id'=>'21',
-                'name'=>'104.jpg',
-            ],
-            [
-                'post_id'=>'21',
-                'name'=>'105.jpg',
-            ],
-            [
-                'post_id'=>'21',
-                'name'=>'106.jpg',
-            ],
-            /* ****************************************** */
-            
-        ];
-
         Post::insert($posts);
-        Image::insert($post_images);
     }
 }
